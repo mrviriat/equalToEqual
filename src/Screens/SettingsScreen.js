@@ -7,7 +7,7 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 function SettingsScreen() {
   return (
     <View style={styles.constainer}>
-            <View style={{height: 200, width: 200, backgroundColor: 'blue' }}></View>
+            <View style={{height: 300, width: 300, backgroundColor: 'black' }}></View>
         </View>
   );
 }
