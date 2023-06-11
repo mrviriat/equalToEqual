@@ -7,7 +7,16 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 function HomeScreen() {
     return (
         <View style={styles.constainer}>
-            <View style={{height: 200, width: 200, backgroundColor: 'red' }}></View>
+            <View style={{
+                height: 200, width: 200, backgroundColor: 'red', alignItems: 'center', justifyContent: 'center'
+            }}>
+                <Text style={{ fontSize: 20, color: 'black' }}>1</Text>
+            </View>
+            <View style={{
+                height: 200, width: 200, backgroundColor: 'blue', alignItems: 'center', justifyContent: 'center'
+            }}>
+                <Text style={{ fontSize: 20, color: 'black' }}>2</Text>
+            </View>
         </View>
     );
 }
