@@ -4,7 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 
-function HomeScreen() {
+const Tab = createMaterialTopTabNavigator();
+
+function HomeScreen({ navigation }) {
     return (
         <View style={styles.constainer}>
             <View style={{

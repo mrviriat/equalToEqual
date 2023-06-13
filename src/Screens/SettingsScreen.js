@@ -7,17 +7,17 @@ import { createMaterialTopTabNavigator } from '@react-navigation/material-top-ta
 function SettingsScreen() {
   return (
     <View style={styles.constainer}>
-            <View style={{height: 300, width: 300, backgroundColor: 'black' }}></View>
-        </View>
+      <View style={{ height: 300, width: 300, backgroundColor: 'black' }}></View>
+    </View>
   );
 }
 
 export default SettingsScreen;
 
 const styles = StyleSheet.create({
-  constainer : {
-flex: 1,
-alignItems: 'center',
-justifyContent: 'center'
+  constainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
 });
