@@ -55,8 +55,8 @@ function RegisterScreen({ navigation }) {
             </Text>
             <TextInput
                 style={styles.input}
-                placeholder='Фамилия_ИО_23'
-                onChangeText={(text) => setLogin(text)}
+                placeholder='Твой логин ГрГУ'
+                onChangeText={(text) => setLogin(text.trim())}
                 placeholderTextColor={'#58657a'}
             />
             <TextInput
