@@ -14,6 +14,14 @@ function LoginScreen({ navigation }) {
     }
 
     const onEnterPress = async () => {
+        /*
+        здесь будет провека на наличие логина в бд
+        */
+
+        /*
+        здесь будет провека на пароль
+        */
+
         navigation.navigate('HomeScreen');
     }
 
@@ -24,14 +32,14 @@ function LoginScreen({ navigation }) {
             </Text>
             <TextInput
                 style={styles.input}
-                placeholder='Фамилия_ИО_23'
-                onChange={(login) => setLogin(login)}
+                placeholder='Логин ГрГУ'
+                onChange={(text) => setLogin(text.trim())}
                 placeholderTextColor={'#58657a'}
             />
             <TextInput
                 style={styles.input}
                 placeholder='Пароль'
-                onChange={(password) => setPassword(password)}
+                onChange={(text) => setPassword(text.trim())}
                 placeholderTextColor={'#58657a'}
                 secureTextEntry
             />
@@ -41,14 +49,12 @@ function LoginScreen({ navigation }) {
             >
                 <Text style={styles.enterText}>Войти</Text>
             </TouchableOpacity>
-            <View style={styles.textContainer}>
-                <Text style={styles.text}>Нет аккаунта?</Text>
-                <TouchableOpacity
-                    onPress={onRegisterScreenPress}
-                >
+            <TouchableOpacity 
+                onPress={onRegisterScreenPress}
+                style={styles.textContainer}>
+                    <Text style={styles.text}>Вы здесь впервые?</Text>
                     <Text style={[styles.text, {textDecorationLine: 'underline'}]}>Зарегестрируйтесь</Text>
-                </TouchableOpacity>
-            </View>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -83,7 +89,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         width: responsiveScreenWidth(75),
         height: responsiveScreenHeight(5),
-        margin: responsiveScreenHeight(0.8),
+        margin: responsiveScreenHeight(1),
         borderRadius: 15,
         backgroundColor: '#e0e0e0',
     },
@@ -98,6 +104,7 @@ const styles = StyleSheet.create({
         marginTop: responsiveScreenHeight(0.8),
     },
     text: {
-        fontSize: responsiveScreenFontSize(1.8),
+        fontSize: responsiveScreenFontSize(1.85),
+        color: '#e0e0e0'
     },
 });
