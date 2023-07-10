@@ -33,13 +33,13 @@ function LoginScreen({ navigation }) {
             <TextInput
                 style={styles.input}
                 placeholder='Логин ГрГУ'
-                onChange={(text) => setLogin(text.trim())}
+                onChangeText={(text) => setLogin(text.trim())}
                 placeholderTextColor={'#58657a'}
             />
             <TextInput
                 style={styles.input}
                 placeholder='Пароль'
-                onChange={(text) => setPassword(text.trim())}
+                onChangeText={(text) => setPassword(text.trim())}
                 placeholderTextColor={'#58657a'}
                 secureTextEntry
             />
